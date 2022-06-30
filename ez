@@ -1,0 +1,317 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local GlassBreaking = Instance.new("TextButton")
+local SwordSlash = Instance.new("TextButton")
+local Slurp = Instance.new("TextButton")
+local Molotov = Instance.new("TextButton")
+local HitSound = Instance.new("TextButton")
+local M14Sound = Instance.new("TextButton")
+local GlassBreaking_2 = Instance.new("TextLabel")
+local SwordSlash_2 = Instance.new("TextLabel")
+local Slurp_2 = Instance.new("TextLabel")
+local Molotov_2 = Instance.new("TextLabel")
+local HitSound_2 = Instance.new("TextLabel")
+local M14 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+Frame.BorderColor3 = Color3.fromRGB(53, 53, 53)
+Frame.BorderSizePixel = 5
+Frame.Position = UDim2.new(0.396051824, 0, 0.272949815, 0)
+Frame.Size = UDim2.new(0, 337, 0, 371)
+Frame.Active = true
+Frame.Draggable = true
+
+Label.Name = "Label"
+Label.Parent = Frame
+Label.BackgroundColor3 = Color3.fromRGB(53, 53, 53)
+Label.BorderSizePixel = 0
+Label.Size = UDim2.new(0, 337, 0, 60)
+Label.Font = Enum.Font.GothamBlack
+Label.Text = "Fort Brag "
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+
+GlassBreaking.Name = "Glass Breaking"
+GlassBreaking.Parent = Label
+GlassBreaking.BackgroundColor3 = Color3.fromRGB(18, 181, 0)
+GlassBreaking.BorderColor3 = Color3.fromRGB(0, 109, 16)
+GlassBreaking.BorderSizePixel = 2
+GlassBreaking.Position = UDim2.new(0.0801186934, 0, 1.7833333, 0)
+GlassBreaking.Size = UDim2.new(0, 58, 0, 40)
+GlassBreaking.Font = Enum.Font.SourceSans
+GlassBreaking.Text = ""
+GlassBreaking.TextColor3 = Color3.fromRGB(0, 0, 0)
+GlassBreaking.TextSize = 14.000
+GlassBreaking.MouseButton1Down:connect(function()
+	local scriptEnv = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("effects.client")
+	shared.Func=nil
+
+
+	for i,v in next, getgc() do
+		if getinfo(v).name == 'play_audio' and getfenv(v).script == scriptEnv then
+			shared.Func= v
+		end
+	end
+
+	for _, c in next, game.Players:GetPlayers() do
+		local newTable = {
+			["Position"] = c.Character.PrimaryPart,
+			["SoundId"] = "rbxassetid://626807593",
+			["Replicate"] = true,
+			["Volume"] = 1,
+			["Effects"] = true
+		}
+		shared.Func(newTable)
+	end
+end)
+
+SwordSlash.Name = "Sword Slash"
+SwordSlash.Parent = Label
+SwordSlash.BackgroundColor3 = Color3.fromRGB(18, 181, 0)
+SwordSlash.BorderColor3 = Color3.fromRGB(0, 109, 16)
+SwordSlash.BorderSizePixel = 2
+SwordSlash.Position = UDim2.new(0.41246292, 0, 1.7833333, 0)
+SwordSlash.Size = UDim2.new(0, 58, 0, 40)
+SwordSlash.Font = Enum.Font.SourceSans
+SwordSlash.Text = ""
+SwordSlash.TextColor3 = Color3.fromRGB(0, 0, 0)
+SwordSlash.TextSize = 14.000
+SwordSlash.MouseButton1Down:connect(function()
+	local scriptEnv = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("effects.client")
+	shared.Func=nil
+
+
+	for i,v in next, getgc() do
+		if getinfo(v).name == 'play_audio' and getfenv(v).script == scriptEnv then
+			shared.Func= v
+		end
+	end
+
+	for _, c in next, game.Players:GetPlayers() do
+		local newTable = {
+			["Position"] = c.Character.PrimaryPart,
+			["SoundId"] = "rbxassetid://935843979",
+			["Replicate"] = true,
+			["Volume"] = 1,
+			["Effects"] = true
+		}
+		shared.Func(newTable)
+	end
+end)
+
+Slurp.Name = "Slurp"
+Slurp.Parent = Label
+Slurp.BackgroundColor3 = Color3.fromRGB(18, 181, 0)
+Slurp.BorderColor3 = Color3.fromRGB(0, 109, 16)
+Slurp.BorderSizePixel = 2
+Slurp.Position = UDim2.new(0.756676555, 0, 1.7833333, 0)
+Slurp.Size = UDim2.new(0, 58, 0, 40)
+Slurp.Font = Enum.Font.SourceSans
+Slurp.Text = ""
+Slurp.TextColor3 = Color3.fromRGB(0, 0, 0)
+Slurp.TextSize = 14.000
+Slurp.MouseButton1Down:connect(function()
+	local scriptEnv = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("effects.client")
+	shared.Func=nil
+
+
+	for i,v in next, getgc() do
+		if getinfo(v).name == 'play_audio' and getfenv(v).script == scriptEnv then
+			shared.Func= v
+		end
+	end
+
+	for _, c in next, game.Players:GetPlayers() do
+		local newTable = {
+			["Position"] = c.Character.PrimaryPart,
+			["SoundId"] = "rbxassetid://10722059",
+			["Replicate"] = true,
+			["Volume"] = 1,
+			["Effects"] = true
+		}
+		shared.Func(newTable)
+	end
+end)
+
+Molotov.Name = "Molotov"
+Molotov.Parent = Label
+Molotov.BackgroundColor3 = Color3.fromRGB(18, 181, 0)
+Molotov.BorderColor3 = Color3.fromRGB(0, 109, 16)
+Molotov.BorderSizePixel = 2
+Molotov.Position = UDim2.new(0.756676555, 0, 3.75, 0)
+Molotov.Size = UDim2.new(0, 58, 0, 40)
+Molotov.Font = Enum.Font.SourceSans
+Molotov.Text = ""
+Molotov.TextColor3 = Color3.fromRGB(0, 0, 0)
+Molotov.TextSize = 14.000
+Molotov.MouseButton1Down:connect(function()
+	local scriptEnv = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("effects.client")
+	shared.Func=nil
+
+
+	for i,v in next, getgc() do
+		if getinfo(v).name == 'play_audio' and getfenv(v).script == scriptEnv then
+			shared.Func= v
+		end
+	end
+
+	for _, c in next, game.Players:GetPlayers() do
+		local newTable = {
+			["Position"] = c.Character.PrimaryPart,
+			["SoundId"] = "rbxassetid://156283121",
+			["Replicate"] = true,
+			["Volume"] = 1,
+			["Effects"] = true
+		}
+		shared.Func(newTable)
+	end
+end)
+
+HitSound.Name = "Hit Sound"
+HitSound.Parent = Label
+HitSound.BackgroundColor3 = Color3.fromRGB(18, 181, 0)
+HitSound.BorderColor3 = Color3.fromRGB(0, 109, 16)
+HitSound.BorderSizePixel = 2
+HitSound.Position = UDim2.new(0.41246289, 0, 3.75, 0)
+HitSound.Size = UDim2.new(0, 58, 0, 40)
+HitSound.Font = Enum.Font.SourceSans
+HitSound.Text = ""
+HitSound.TextColor3 = Color3.fromRGB(0, 0, 0)
+HitSound.TextSize = 14.000
+HitSound.MouseButton1Down:connect(function()
+	local scriptEnv = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("effects.client")
+	shared.Func=nil
+
+
+	for i,v in next, getgc() do
+		if getinfo(v).name == 'play_audio' and getfenv(v).script == scriptEnv then
+			shared.Func= v
+		end
+	end
+
+	for _, c in next, game.Players:GetPlayers() do
+		local newTable = {
+			["Position"] = c.Character.PrimaryPart,
+			["SoundId"] = "rbxassetid://321505254",
+			["Replicate"] = true,
+			["Volume"] = 1,
+			["Effects"] = true
+		}
+		shared.Func(newTable)
+	end
+end)
+
+M14Sound.Name = "M14 Sound"
+M14Sound.Parent = Label
+M14Sound.BackgroundColor3 = Color3.fromRGB(18, 181, 0)
+M14Sound.BorderColor3 = Color3.fromRGB(0, 109, 16)
+M14Sound.BorderSizePixel = 2
+M14Sound.Position = UDim2.new(0.0593471527, 0, 3.75, 0)
+M14Sound.Size = UDim2.new(0, 58, 0, 40)
+M14Sound.Font = Enum.Font.SourceSans
+M14Sound.Text = ""
+M14Sound.TextColor3 = Color3.fromRGB(0, 0, 0)
+M14Sound.TextSize = 14.000
+M14Sound.MouseButton1Down:connect(function()
+	local scriptEnv = game:GetService("Players").LocalPlayer.PlayerScripts:FindFirstChild("effects.client")
+	shared.Func=nil
+
+
+	for i,v in next, getgc() do
+		if getinfo(v).name == 'play_audio' and getfenv(v).script == scriptEnv then
+			shared.Func= v
+		end
+	end
+
+	for _, c in next, game.Players:GetPlayers() do
+		local newTable = {
+			["Position"] = c.Character.PrimaryPart,
+			["SoundId"] = "rbxassetid://263683208",
+			["Replicate"] = true,
+			["Volume"] = 1,
+			["Effects"] = true
+		}
+		shared.Func(newTable)
+	end
+end)
+
+GlassBreaking_2.Name = "Glass Breaking"
+GlassBreaking_2.Parent = Frame
+GlassBreaking_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GlassBreaking_2.BackgroundTransparency = 1.000
+GlassBreaking_2.Position = UDim2.new(0.0801186934, 0, 0.215633422, 0)
+GlassBreaking_2.Size = UDim2.new(0, 58, 0, 27)
+GlassBreaking_2.Font = Enum.Font.GothamBlack
+GlassBreaking_2.Text = "Glass Breaking"
+GlassBreaking_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+GlassBreaking_2.TextSize = 14.000
+
+SwordSlash_2.Name = "Sword Slash"
+SwordSlash_2.Parent = Frame
+SwordSlash_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SwordSlash_2.BackgroundTransparency = 1.000
+SwordSlash_2.Position = UDim2.new(0.41246292, 0, 0.215633422, 0)
+SwordSlash_2.Size = UDim2.new(0, 58, 0, 27)
+SwordSlash_2.Font = Enum.Font.GothamBlack
+SwordSlash_2.Text = "Sword Slash"
+SwordSlash_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwordSlash_2.TextSize = 14.000
+
+Slurp_2.Name = "Slurp"
+Slurp_2.Parent = Frame
+Slurp_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Slurp_2.BackgroundTransparency = 1.000
+Slurp_2.Position = UDim2.new(0.756676555, 0, 0.215633422, 0)
+Slurp_2.Size = UDim2.new(0, 58, 0, 27)
+Slurp_2.Font = Enum.Font.GothamBlack
+Slurp_2.Text = "Slurp"
+Slurp_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Slurp_2.TextSize = 14.000
+
+Molotov_2.Name = "Molotov"
+Molotov_2.Parent = Frame
+Molotov_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Molotov_2.BackgroundTransparency = 1.000
+Molotov_2.Position = UDim2.new(0.756676555, 0, 0.533692718, 0)
+Molotov_2.Size = UDim2.new(0, 58, 0, 27)
+Molotov_2.Font = Enum.Font.GothamBlack
+Molotov_2.Text = "Molotov"
+Molotov_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Molotov_2.TextSize = 14.000
+
+HitSound_2.Name = "Hit Sound"
+HitSound_2.Parent = Frame
+HitSound_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HitSound_2.BackgroundTransparency = 1.000
+HitSound_2.Position = UDim2.new(0.41246289, 0, 0.533692718, 0)
+HitSound_2.Size = UDim2.new(0, 58, 0, 27)
+HitSound_2.Font = Enum.Font.GothamBlack
+HitSound_2.Text = "Hit Sound"
+HitSound_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+HitSound_2.TextSize = 14.000
+
+M14.Name = "M14"
+M14.Parent = Frame
+M14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+M14.BackgroundTransparency = 1.000
+M14.Position = UDim2.new(0.0593471527, 0, 0.533692718, 0)
+M14.Size = UDim2.new(0, 58, 0, 27)
+M14.Font = Enum.Font.GothamBlack
+M14.Text = "M14 Sound"
+M14.TextColor3 = Color3.fromRGB(255, 255, 255)
+M14.TextSize = 14.000
